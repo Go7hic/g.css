@@ -1,4 +1,4 @@
-rest.CSS
+rest.css
 ==========
 
 创建适合自己使用的 reset.css
