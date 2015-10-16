@@ -14,6 +14,7 @@ normalize.css 不够用，不是很适合中文；han.css 太重。
 git clone git@github.com:dyygtfx/g.css.git
 <link rel="stylesheet" href="g.css">
 ```
+DEMO: http://blog.yongyuan.us/g.css/index.html
 
 #### License
 MIT
