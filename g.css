@@ -11,8 +11,11 @@ html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    font-size: 100%;
-    -webkit-font-smoothing: subpixel-antialiased
+    font-size: 10px;
+    /* 字体渲染优化 */
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;/*绘制文本时易读性优先，会启用字距调整和连字*/
 }
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
     margin: 0;
@@ -32,7 +35,7 @@ html {
 /* 设置默认字体 */
 body, button, input, select, textarea {
     /* for ie */
-    font: 14px/1.8 webfont, Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+    font: 1.4rem/1.8 webfont, Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
 }
 
 /* html5 */
@@ -66,28 +69,28 @@ blockquote:before, blockquote:after, q:before, q:after {
 blockquote {
     position: relative;
     padding: 0 0 0 10px;
-    margin: 15px 0;
+    margin: 1.5rem 0;
     border-left: 2px solid #26CC7F;
 }
 
 /* 标题 */
 h1 {
-    font-size: 32px;
+    font-size: 3.2rem;
 }
 h2 {
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 h3 {
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 h4 {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 h5 {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 h6 {
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 /* a 标签 */
@@ -129,7 +132,7 @@ b, strong {
     font-weight: bold;
 }
 small {
-    font-size: 80%;
+    font-size: 1rem;
 }
 
 /* 分割线, 根据自己的需要改动Border的颜色 */
@@ -138,17 +141,17 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #cccccc;
-    margin: 1em 0;
+    margin: 1rem 0;
     padding: 0;
 }
 
 /* 斜体的代码类样式 */
 code, kbd, pre, samp {
     font-family: consolas,monaco,monospace;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 pre {
-    padding: 15px;
+    padding: 1.5rem;
     overflow: auto;
     white-space: pre;
     word-wrap: normal;
@@ -157,16 +160,16 @@ pre {
 }
 
 sub, sup {
-    font-size: 75%;
+    font-size: 1rem;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
 }
 sup {
-    top: -0.5em;
+    top: -0.5rem;
 }
 sub {
-    bottom: -0.25em;
+    bottom: -0.25rem;
 }
 
 /* 重置表格表单类元素 */
@@ -215,7 +218,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+    padding: 0.5rem;
 }
 textarea {
     overflow: auto;
