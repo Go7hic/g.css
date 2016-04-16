@@ -11,13 +11,10 @@ normalize.css 不够用，不是很适合中文；han.css 太重；又不想添�
 #### 使用
 
 ```
-git clone git@github.com:dyygtfx/g.css.git
+npm install g.css -save
 <link rel="stylesheet" href="g.css">
 ```
 DEMO: http://blog.yongyuan.us/g.css/index.html
 
 #### License
 MIT
-
-
-
