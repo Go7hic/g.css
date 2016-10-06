@@ -1,18 +1,23 @@
 @charset "UTF-8";
-@font-face {
-    font-family: 'webfont';
-    src: url('http://at.alicdn.com/t/o6exao62y81o47vi.eot'); /* IE9*/
-    src: url('http://at.alicdn.com/t/o6exao62y81o47vi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('http://at.alicdn.com/t/o6exao62y81o47vi.woff') format('woff'), /* chrome、firefox */
-    url('http://at.alicdn.com/t/o6exao62y81o47vi.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('http://at.alicdn.com/t/o6exao62y81o47vi.svg#NotoSansHans-DemiLight') format('svg'); /* iOS 4.1- */
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit; /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
 }
 html {
-    font-family: sans-serif;
+     box-sizing: border-box;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     /* 根元素大小 设置 1rem = 10px 可以根据自己修改*/
     font-size: 10px;
+    /* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+    overflow-y: scroll;
     /* 字体渲染优化 */
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -27,15 +32,10 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
     background: transparent;
 }
 
-/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
-html {
-    overflow-y: scroll;
-}
-
 /* 设置默认字体 */
 body, button, input, select, textarea {
     /* for ie */
-    font: 1.4rem/1.8 webfont, Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+    font: 1.4rem/1.8 Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
 }
 
 /* html5 */
@@ -214,6 +214,12 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
+
+[type="search"] {
+  -webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px; /* Correct the outline style in Safari */
+}
+
 fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
@@ -226,6 +232,17 @@ optgroup {
     font-weight: bold;
 }
 
+::-moz-selection {
+  background-color: #b3d4fc; /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc; /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
 /* 清除浮动 */
 .clearfix:after {
     content: "\200B";
