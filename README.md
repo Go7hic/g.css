@@ -15,7 +15,7 @@ npm install g.css -save
 
 #### DEMO
 
-http://blog.yongyuan.us/g.css/index.html
+http://dyygtfx.github.io/g.css/index.html
 
 #### License
 MIT
