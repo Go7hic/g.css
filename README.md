@@ -1,6 +1,8 @@
 g.css
 ==========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dyygtfx/g.css.svg)](https://greenkeeper.io/)
+
 一个更适合中文网站的基础样式文件
 
 #### Usage
